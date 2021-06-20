@@ -61,7 +61,7 @@ sudo cp -ra .themes /home/tony/.themes
 gsettings set org.gnome.desktop.interface gtk-theme 'McOS-XFCE-Edition-II-1'
 gsettings set org.gnome.desktop.interface icon-theme 'McMojave-circle'
 
-
+#	
  
 
 
