@@ -6,19 +6,25 @@ bash ./tweakswappiness.sh
 bash ./setFirewall.sh
 bash ./settingMirrors.sh
 
-sudo pacman -Syu
+sudo pacman -Syu --noconfirm
 
 #Install softwares
 
 echo "Installing softwares."
 
+#Need to be tested
 echo "Installs Blender 2.93"
 curl https://ftp.nluug.nl/pub/graphics/blender/release/Blender2.93/blender-2.93.0-linux-x64.tar.xz --output /home/tony/Downloads/blender.tar.xz
-tar -xvf /home/tony/Downloads/blender.tar.xz
+sudo tar -xvf /home/$USER/Downloads/blender.tar.xz | mv /usr/bin/
+
+cd /usr/bin/blender*
+cp blender.desktop usr/share/application 
 
 echo "Installs Krita"
 sudo pamac install krita --no-confirm
 
+
+#not found!!!
 echo "Installs LBRY"
 sudo pamac install lbry-app-bin --no-confirm
 
@@ -34,6 +40,7 @@ sudo pamac install gpicview --no-confirm
 echo "Installs VLC"
 sudo pamac install vlc --no-confirm
 
+#Too long to install
 echo "Installs LibreOffice"
 sudo pamac install libreoffice --no-confirm
 
