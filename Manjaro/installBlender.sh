@@ -8,7 +8,7 @@
  function uncompress_bl {
 	echo "Untaring"
         cd /home/$USER/Downloads
-	sudo tar -xvf blender.tar.xz
+	sudo tar -xvf blender.tar.xz -v
 	
  }
 
@@ -22,7 +22,8 @@
  function launcher_bl {
 	echo "Install to launcher"
 	cd /usr/bin/blender*
-	cp blender.desktop usr/share/applications 
+	sudo sed -i 's#Exec=blender %f#Exec=/usr/bin/blender-*/blender#' blender.desktop
+	sudo cp blender.desktop /usr/share/applications 
 }
 
 download_bl
