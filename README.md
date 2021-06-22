@@ -4,4 +4,4 @@ Ubuntu and Manjaro.
 
 **Installation**
 
-Run EzInstall.sh as root.
+Run install<Distro>.sh as root.
