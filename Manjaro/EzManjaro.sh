@@ -14,8 +14,7 @@ echo "Installing softwares."
 
 #Need to be tested
 echo "Installs Blender 2.93"
-curl https://ftp.nluug.nl/pub/graphics/blender/release/Blender2.93/blender-2.93.0-linux-x64.tar.xz --output /home/tony/Downloads/blender.tar.xz
-sudo tar -xvf /home/$USER/Downloads/blender.tar.xz | mv /usr/bin/
+bash ./installBlender.sh
 
 cd /usr/bin/blender*
 cp blender.desktop usr/share/application 
@@ -46,6 +45,12 @@ sudo pamac install libreoffice --no-confirm
 
 echo "Installs Brave browser"
 sudo pamac install brave --no-confirm
+
+echo "Installs disk analyser"
+sudo pamac install baobab --no-confirm
+
+echo "Installs Reaper"
+bash ./installReaper.sh
 
 echo "Done installing softwares."
 
