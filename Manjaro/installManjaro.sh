@@ -74,5 +74,7 @@ cp terminalrc /home/$USER/.config/xfce4/terminal #Terminal appearance settings
 #Sets panels preferences
 xfconf-query -c xfce4-panel -p /panels/panel-0/autohide-behavior -s 1 
 
+#
+
 
 
