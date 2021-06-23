@@ -69,6 +69,8 @@ sudo cp -ra .themes /home/tony/.themes
 xfconf-query -c xfwm4 -p /general/theme -s Gn-OSX-XFCE-Edition-1.2
 xfconf-query -c xsettings -p /Net/IconThemeName -s McMojave-circle
 
+cp terminalrc /home/$USER/.config/xfce4/terminal #Terminal appearance settings
+
 #Sets panels preferences
 xfconf-query -c xfce4-panel -p /panels/panel-0/autohide-behavior -s 1 
 
