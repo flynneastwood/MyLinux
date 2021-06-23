@@ -60,8 +60,12 @@ sudo cp -ra .themes /home/tony/.themes
 
 #Sets xconf values
 
+#Sets the theme and icons
 xfconf-query -c xfwm4 -p /general/theme -s Gn-OSX-XFCE-Edition-1.2
 xfconf-query -c xsettings -p /Net/IconThemeName -s McMojave-circle
+
+#Sets panels preferences
+xfconf-query -c xfce4-panel -p /panels/panel-0/autohide-behavior -s 1 
 
 
 
