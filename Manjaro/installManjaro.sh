@@ -54,6 +54,11 @@ bash ./installReaper.sh
 
 echo "Done installing softwares."
 
+#Installs configs for softwares
+echo "Installing software configs"
+bash ./installSoftwareConfigs.sh
+
+
 #Sets the appearance with icons and themes
 sudo cp -ra .icons /home/tony/.icons
 sudo cp -ra .themes /home/tony/.themes
