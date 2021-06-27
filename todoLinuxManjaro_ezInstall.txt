@@ -1,0 +1,12 @@
+1.Installation des logiciels
+
+2.Copie des configurations pour les logiciels
+
+4. Copie des scripts bash dans /usr/bin/bash
+
+5. Appliquer les Alias dans home/.bashrc
+
+6. Configurer Shortcuts
+
+7. Configuer le git avec account et mail
+
