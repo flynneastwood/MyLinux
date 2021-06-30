@@ -12,6 +12,9 @@ sudo pacman -Syu --noconfirm
 
 echo "Installing softwares."
 
+#Installs a barebone calculator
+pamac install pantheon-calculator
+
 #Need to be tested
 echo "Installs Blender 2.93"
 bash ./installBlender.sh
