@@ -61,6 +61,9 @@ echo "Done installing softwares."
 echo "Installing software configs"
 bash ./installSoftwareConfigs.sh
 
+sudo pacman -S noto-fonts-emoji #Enable support for emoji
+pamac install ttf-ms-fonts #Enables default microsoft fonts
+
 
 #Sets the appearance with icons and themes
 sudo cp -ra .icons /home/tony/.icons
