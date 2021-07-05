@@ -6,21 +6,18 @@ bash ./tweakswappiness.sh
 bash ./setFirewall.sh
 bash ./settingMirrors.sh
 
-sudo pacman -Syu --noconfirm
+sudo pacman -Syu --no-confirm
 
 #Install softwares
 
 echo "Installing softwares."
 
 #Installs a barebone calculator
-pamac install pantheon-calculator
+pamac install pantheon-calculator --no-confirm
 
 #Need to be tested
-echo "Installs Blender 2.93"
+echo "Installs Blender"
 bash ./installBlender.sh
-
-cd /usr/bin/blender*
-cp blender.desktop usr/share/application 
 
 echo "Installs Krita"
 sudo pamac install krita --no-confirm
@@ -61,8 +58,8 @@ echo "Done installing softwares."
 echo "Installing software configs"
 bash ./installSoftwareConfigs.sh
 
-sudo pacman -S noto-fonts-emoji #Enable support for emoji
-pamac install ttf-ms-fonts #Enables default microsoft fonts
+sudo pacman -S noto-fonts-emoji --noconfirm #Enable support for emoji
+sudo pamac install ttf-ms-fonts --no-confirm #Enables default microsoft fonts
 
 
 #Sets the appearance with icons and themes
@@ -72,15 +69,14 @@ sudo cp -ra .themes /home/tony/.themes
 #Sets xconf values
 
 #Sets the theme and icons
-xfconf-query -c xfwm4 -p /general/theme -s Gn-OSX-XFCE-Edition-1.2
-xfconf-query -c xsettings -p /Net/IconThemeName -s McMojave-circle
+xfconf-query -c xfwm4 -p /general/theme -s Nordic-bluish-accent
+xfconf-query -c xsettings -p /Net/IconThemeName -s Nordic-Darker
 
 cp terminalrc /home/$USER/.config/xfce4/terminal #Terminal appearance settings
 
 #Sets panels preferences
 xfconf-query -c xfce4-panel -p /panels/panel-0/autohide-behavior -s 1 
 
-#
 
 
 

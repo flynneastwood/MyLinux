@@ -1,6 +1,8 @@
 1.Installation des logiciels
 
 2.Copie des configurations pour les logiciels
+	Blender startup scenes et template video et Nordic
+	brave bookmarks	
 
 4. Copie des scripts bash dans /usr/bin/bash
 
@@ -10,3 +12,23 @@
 
 7. Configuer le git avec account et mail
 
+8. Appliquer le background et whisker icon.
+
+9. Setter le login avec le theme Nordic
+
+10. Setter les applications par defaut
+
+11 Setter les shortcuts sur le bureau
+
+12 Configurer Thunar
+
+BUGS
+	Lbry fonctionne pas
+	ttf-ms-fonts N<est souvent pas trouve
+	Theme nordic ne saffiche pas
+	config blender theme et config a revoir
+	terminal pref appearance semble pas fonctionner sans confirmation doverwrite
+	Reaper fonctionne pas
+	Libre Office fonctionne pas
+
+Faire un repo exclusif pour Manjaro
