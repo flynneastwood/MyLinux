@@ -1,21 +1,21 @@
-#!/bin/bash
+﻿#!/bin/bash
 
-#Sets the essentials
+#Sets the essentials. All thse are working
 bash ./ssdtrim.sh
 bash ./tweakswappiness.sh
 bash ./setFirewall.sh
 bash ./settingMirrors.sh
 
-sudo pacman -Syu --no-confirm
+sudo pacman -Syu –no-confirm #No confrim command does not work.
 
 #Install softwares
 
 echo "Installing softwares."
 
 #Installs a barebone calculator
-pamac install pantheon-calculator --no-confirm
+pamac install pantheon-calculator –no-confirm #Does not finish?
 
-#Need to be tested
+#Need to be tested #Blender is not installing correctly?
 echo "Installs Blender"
 bash ./installBlender.sh
 
