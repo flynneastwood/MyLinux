@@ -17,7 +17,7 @@ pamac install pantheon-calculator –no-confirm #Does not finish?
 
 #Need to be tested #Blender is not installing correctly?
 echo "Installs Blender"
-bash ./installBlender.sh
+pamac install blender
 
 echo "Installs Krita"
 sudo pamac install krita --no-confirm
@@ -39,12 +39,12 @@ sudo pamac install gpicview --no-confirm
 echo "Installs VLC"
 sudo pamac install vlc --no-confirm
 
-#Too long to install
+#Too long to install. Synchronizing packages infinitely?
 echo "Installs LibreOffice"
 sudo pamac install libreoffice --no-confirm
 
 echo "Installs Brave browser"
-sudo pamac install brave --no-confirm
+sudo pamac install brave –no-confirm #Synchronizing packages infinitely?
 
 echo "Installs disk analyser"
 sudo pamac install baobab --no-confirm
