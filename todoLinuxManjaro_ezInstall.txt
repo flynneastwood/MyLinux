@@ -23,13 +23,10 @@
 12 Configurer Thunar
 
 BUGS
-	Au début, pacman ne reconnait pas la commande no confirm
-	Lbry fonctionne pas
 	ttf-ms-fonts N<est souvent pas trouve
 	Theme nordic ne saffiche pas
 	config blender theme et config a revoir
 	terminal pref appearance semble pas fonctionner sans confirmation doverwrite
-	Reaper fonctionne pas
 	Libre Office fonctionne pas
 
 Faire un repo exclusif pour Manjaro

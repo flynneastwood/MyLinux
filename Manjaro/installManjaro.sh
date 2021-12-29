@@ -6,25 +6,21 @@ bash ./tweakswappiness.sh
 bash ./setFirewall.sh
 bash ./settingMirrors.sh
 
-sudo pacman -Syu –no-confirm #No confrim command does not work.
+sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" #enbales AUR support for Pamac
+sudo pacman -Syu --noconfirm #No confrim command does not work.
 
 #Install softwares
 
 echo "Installing softwares."
 
 #Installs a barebone calculator
-pamac install pantheon-calculator –no-confirm #Does not finish?
+pamac install pantheon-calculator --no-confirm #Does not finish?
 
 echo "Installs Blender"
-pamac install blender
+pamac install blender --no-confirm
 
 echo "Installs Krita"
 sudo pamac install krita --no-confirm
-
-
-#not found!!!
-echo "Installs LBRY"
-sudo pamac install lbry-app-bin --no-confirm
 
 echo "Installs OBS"
 sudo pamac install obs-studio --no-confirm
@@ -35,21 +31,19 @@ sudo pamac install qjackctl --no-confirm
 echo "Installs the image viewer"
 sudo pamac install gpicview --no-confirm
 
-echo "Installs VLC"
-sudo pamac install vlc --no-confirm
 
 #Too long to install. Synchronizing packages infinitely?
 echo "Installs LibreOffice"
 sudo pamac install libreoffice --no-confirm
 
 echo "Installs Brave browser"
-sudo pamac install brave –no-confirm #Synchronizing packages infinitely?
+sudo pamac install brave --no-confirm #Synchronizing packages infinitely?
 
 echo "Installs disk analyser"
 sudo pamac install baobab --no-confirm
 
 echo "Installs Reaper"
-bash ./installReaper.sh
+sudo pamac install reaper-bin --no-confirm
 
 echo "Done installing softwares."
 
