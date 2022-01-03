@@ -1,4 +1,8 @@
-﻿1.Installation des logiciels DONE
+﻿1.Installation des logiciels 
+	Mieux déterminer LibreOffice softwares
+		Writer
+		Impress
+		Calc
 
 2.Copie des configurations pour les logiciels
 	Blender startup scenes et template video et Nordic
@@ -21,6 +25,8 @@
 11 Setter les shortcuts sur le bureau
 
 12 Configurer Thunar
+
+13 Placer raccourcis sur Desktop pour app les plus utilisés. 
 
 BUGS
 	Config blender qui download de git, mais install pas correctement. souvent install dans un dossier root/Downloads. au lieu de $USER/Downloads

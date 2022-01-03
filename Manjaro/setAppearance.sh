@@ -1,5 +1,10 @@
 ﻿#!/bin/bash
 
+#Download Nordic Theme from Github
+git clone https://github.com/EliverLara/Nordic.git
+mkdir /home/$USER/.themes
+cp -r Nordic /home/$USER/.themes
+
 #Sets the appearance with icons and themes
 sudo cp -ra .icons /home/$USER/.icons
 sudo cp -ra .themes /home/$USER/.themes

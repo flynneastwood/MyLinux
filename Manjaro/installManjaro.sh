@@ -34,7 +34,7 @@ sudo pamac install gpicview --no-confirm
 
 #Too long to install. Synchronizing packages infinitely?
 echo "Installs LibreOffice"
-sudo pamac install libreoffice --no-confirm
+sudo pamac install libreoffice-fresh --no-confirm
 
 echo "Installs Brave browser"
 sudo pamac install brave --no-confirm #Synchronizing packages infinitely?
@@ -44,6 +44,9 @@ sudo pamac install baobab --no-confirm
 
 echo "Installs Reaper"
 sudo pamac install reaper-bin --no-confirm
+
+echo "Installs Discord"
+sudo pamac install discord --no-confirm
 
 echo "Done installing softwares."
 
