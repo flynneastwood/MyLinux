@@ -6,7 +6,9 @@
 
 2.Copie des configurations pour les logiciels
 	Blender startup scenes et template video et Nordic
-	brave bookmarks	
+	brave bookmarks + preferences + extensions
+	OBS configuration scenes et audio
+		
 
 4. Copie des scripts bash dans /usr/bin/bash
 
