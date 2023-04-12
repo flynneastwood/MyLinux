@@ -11,7 +11,7 @@ sudo systemctl start fstrim.timer
 
 # Reduce swappiness
 echo "Reducing swappiness..."
-echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.d/99-swappiness.conf
+echo "vm.swappiness=60" | sudo tee -a /etc/sysctl.d/99-swappiness.conf
 sudo sysctl --system
 
 # Enable firewall
