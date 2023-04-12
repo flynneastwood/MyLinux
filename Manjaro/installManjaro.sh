@@ -1,10 +1,26 @@
 ﻿#!/bin/bash
 
-#Sets the essentials. All thse are working
-bash ./ssdtrim.sh
-bash ./tweakswappiness.sh
-bash ./setFirewall.sh
-bash ./settingMirrors.sh
+# Update mirror list and system
+echo "Updating mirror list and system..."
+sudo pacman-mirrors --fasttrack && sudo pacman -Syyu --noconfirm
+
+# Enable SSD TRIM
+echo "Enabling SSD TRIM..."
+sudo systemctl enable fstrim.timer
+sudo systemctl start fstrim.timer
+
+# Reduce swappiness
+echo "Reducing swappiness..."
+echo "vm.swappiness=10" | sudo tee -a /etc/sysctl.d/99-swappiness.conf
+sudo sysctl --system
+
+# Enable firewall
+echo "Enabling firewall..."
+sudo systemctl enable ufw
+sudo systemctl start ufw
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw enable
 
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" #enbales AUR support for Pamac
 sudo pacman -Syu --noconfirm #No confrim command does not work.
