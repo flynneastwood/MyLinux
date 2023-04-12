@@ -53,7 +53,9 @@ echo "Installs LibreOffice"
 sudo pamac install libreoffice-fresh --no-confirm
 
 echo "Installs Brave browser"
-sudo pamac install brave --no-confirm #Synchronizing packages infinitely?
+sudo pacman-mirrors --api --set-branch stable && echo "Server = https://brave-browser-arch.stable.arhag.io/\$arch/" | sudo tee -a /etc/pacman.conf && sudo pacman-key --recv-key 3050AC3CD2AE6F03 && sudo pacman-key --lsign-key 3050AC3CD2AE6F03
+sudo pacman -Syy
+sudo pacman -S brave-browser
 
 echo "Installs disk analyser"
 sudo pamac install baobab --no-confirm
