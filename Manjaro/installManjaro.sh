@@ -29,7 +29,7 @@ sudo pacman -Syu --noconfirm #No confrim command does not work.
 
 echo "Installing softwares."
 
-sudo pacman -S --noconfirm --needed blender krita obs-studio gpicview libreoffice-still baobab pantheon-calculator reaper discord
+sudo pacman -S --noconfirm --needed blender cuda git krita obs-studio gpicview libreoffice-still baobab pantheon-calculator reaper discord
 
 echo "Installs Brave browser"
 sudo pacman-mirrors --api --set-branch stable && echo "Server = https://brave-browser-arch.stable.arhag.io/\$arch/" | sudo tee -a /etc/pacman.conf && sudo pacman-key --recv-key 3050AC3CD2AE6F03 && sudo pacman-key --lsign-key 3050AC3CD2AE6F03
