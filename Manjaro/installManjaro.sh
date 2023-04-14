@@ -40,7 +40,9 @@ echo "Done installing softwares."
 
 #Installs configs for softwares
 echo "Installing software configs"
-bash ./installSoftwareConfigs.sh
+
+echo "Setting up blender"
+bash ./ConfigureBlender.sh
 
 sudo pacman -S noto-fonts-emoji --noconfirm #Enable support for emoji
 sudo pamac install ttf-ms-fonts --no-confirm #Enables default microsoft fonts
