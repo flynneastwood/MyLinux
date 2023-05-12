@@ -33,9 +33,6 @@
 BUGS
 	Config blender qui download de git, mais install pas correctement. souvent install dans un dossier root/Downloads. au lieu de $USER/Downloads
 	ttf-ms-fonts N<est souvent pas trouve
-	Theme nordic ne saffiche pas
-	config blender theme et config a revoir
-	terminal pref appearance semble pas fonctionner sans confirmation doverwrite
-	Libre Office fonctionne pas
-
-Faire un repo exclusif pour Manjaro
+	Theme nordic ne s'installe pas parce qu'on se trouve pas à la bonne place.
+	config blender theme et config a ne se fait pas correctement.
+	terminal.rc est pas copié
