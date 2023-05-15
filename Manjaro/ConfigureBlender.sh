@@ -1,28 +1,28 @@
 #!/bin/bash
 
-# Change to the user's home directory
+# Step 1: Go to the home directory
 cd ~
 
-# Download my config files from Github
-sudo git clone https://github.com/flynneastwood/BlenderConfigs
+# Step 2: Download repo containing the config files
+git clone https://github.com/flynneastwood/BlenderConfigs
 
-# Define the paths to your custom configuration files
+# Step 3: Define paths to custom configuration files
 CUSTOM_USERPREF="$HOME/BlenderConfigs/userpref.blend"
 CUSTOM_STARTUP="$HOME/BlenderConfigs/startup.blend"
 
-# Create the Blender configuration directory if it doesn't exist
-BLENDER_CONFIG_DIR="$HOME/.config/blender"
-mkdir -p "${BLENDER_CONFIG_DIR}"
+# Step 4: Get the Blender version
+BLENDER_VERSION=$(blender --version | awk 'NR==1 {print $2}' | awk '{print substr($0,1,3)}')
 
-# Find the installed Blender version
-BLENDER_VERSION=$(ls "${BLENDER_CONFIG_DIR}")
+# Step 5: Create version specific config folder
+CONFIG_FOLDER="$HOME/.config/blender/$BLENDER_VERSION"
+mkdir -p "$CONFIG_FOLDER"
 
-# Create the version-specific configuration directory if it doesn't exist
-VERSION_CONFIG_DIR="${BLENDER_CONFIG_DIR}/${BLENDER_VERSION}/config"
-mkdir -p "${VERSION_CONFIG_DIR}"
+# Step 6: Create "config" folder inside version specific config folder
+CONFIG_FOLDER="$CONFIG_FOLDER/config"
+mkdir -p "$CONFIG_FOLDER"
 
-# Copy the custom configuration files to the Blender configuration directory
-cp "${CUSTOM_USERPREF}" "${VERSION_CONFIG_DIR}/userpref.blend"
-cp "${CUSTOM_STARTUP}" "${VERSION_CONFIG_DIR}/startup.blend"
+# Step 7: Copy custom configuration files to "config" folder
+cp "$CUSTOM_USERPREF" "$CONFIG_FOLDER"
+cp "$CUSTOM_STARTUP" "$CONFIG_FOLDER"
 
-echo "Blender has been configured with your custom preferences."
+echo "Blender configuration has been set up with your custom configuration files."
